@@ -1,0 +1,17 @@
+- target: LICENSE
+  template: LICENSE.j2
+- target: pyproject.toml
+  template: pyproject.toml.j2
+- target: README.rst
+  template: README.rst.j2
+- target: .gitignore
+  template: .gitignore.j2
+- target: .ctags
+  template: .ctags.j2
+- target: docsrc/index.rst
+  template: index.rst.j2
+- target: docsrc/conf.py
+  template: conf.py.j2
+- target: .github/workflows/action.yml
+  template: action.yml.j2
+
