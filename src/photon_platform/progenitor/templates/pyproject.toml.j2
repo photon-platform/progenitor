@@ -1,7 +1,6 @@
 [project]
-name = "{{project_name}}"
+name = "{{org_name}}-{{project_name}}"
 dynamic = ["version"]
-# version = "0.0.1"
 authors = [
   { name="phi ARCHITECT", email="github@phiarchitect.com" },
 ]
@@ -20,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-{{project_name}} = "{{project_name}}.app:run"
+{{project_name}} = "{{namespace}}.{{project_name}}.__main__:main"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
@@ -32,8 +31,9 @@ include = ["photon_platform"]
 namespaces = true
 
 [tool.setuptools.dynamic]
-version = {attr = "photon_platform.logger.__version__"}
+version = {attr = "{{namespace}}.{{project_name}}.__version__"}
 
 [project.urls]
-"Homepage" = "https://github.com/photon-platform/logger"
-"Bug Tracker" = "https://github.com/photon-platform/logger/issues"
+"Website" = "https://{{org_name}}.github.io/{{project_name}}"
+"Repository" = "https://github.com/{{org_name}}/{{project_name}}"
+"Issues" = "https://github.com/{{org_name}}/{{project_name}}/issues"

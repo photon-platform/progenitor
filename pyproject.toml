@@ -1,11 +1,11 @@
 [project]
-name = "progenitor"
+name = "photon-platform-progenitor"
 dynamic = ["version"]
 # version = "0.0.1"
 authors = [
   { name="phi ARCHITECT", email="github@phiarchitect.com" },
 ]
-description = "create and manage log entries for a python project"
+description = "Sparks life into Python projects"
 readme = "README.rst"
 requires-python = ">=3.7"
 classifiers = [
@@ -14,13 +14,14 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
+    "click",
     "textual",
     "rich",
     "jinja2",
 ]
 
 [project.scripts]
-progenitor = "progenitor.app:run"
+progenitor = "photon_platform.progenitor.app:run"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
@@ -32,8 +33,8 @@ include = ["photon_platform"]
 namespaces = true
 
 [tool.setuptools.dynamic]
-version = {attr = "photon_platform.logger.__version__"}
+version = {attr = "photon_platform.progenitor.__version__"}
 
 [project.urls]
-"Homepage" = "https://github.com/photon-platform/logger"
-"Bug Tracker" = "https://github.com/photon-platform/logger/issues"
+"Homepage" = "https://github.com/photon-platform/progenitor"
+"Bug Tracker" = "https://github.com/photon-platform/progenitor/issues"
