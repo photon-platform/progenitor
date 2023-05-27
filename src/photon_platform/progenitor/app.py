@@ -4,11 +4,6 @@ from photon_platform.formulator import load_blueprint, Formulator
 
 import pkg_resources
 
-#  blueprint_path = pkg_resources.resource_filename(
-    #  "photon_platform.progenitor", "blueprint.yaml"
-#  )
-#  blueprint = load_blueprint(blueprint_path)
-
 
 @click.command()
 @click.option(
