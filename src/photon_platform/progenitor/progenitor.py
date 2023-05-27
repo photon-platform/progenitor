@@ -30,7 +30,7 @@ def copy_template_files(project_path, project_name, author, org_name, namespace)
     }
 
     script_dir = Path(__file__).parent.absolute()
-    yaml_file_path = script_dir / "progenitor.yaml"
+    yaml_file_path = script_dir / "templates.yaml"
 
     with open(yaml_file_path, "r") as f:
         file_structure = yaml.safe_load(f)
