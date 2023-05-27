@@ -2,6 +2,8 @@ import yaml
 from pathlib import Path
 from jinja2 import Environment, PackageLoader
 
+from photon_platform.modulator import Modulator
+
 
 def create_project(project_name, author, path, org_name, namespace):
     """Create a new Python project in an empty folder."""
@@ -42,3 +44,8 @@ def copy_template_files(project_path, project_name, author, org_name, namespace)
         )  # create directory if it doesn't exist
         template = env.get_template(file_info["template"])
         target.write_text(template.render(template_variables))
+
+    #  create_module(project_path, namespace, project_name)
+    modulator = Modulator(project_path, namespace)
+    modulator.create_module(project_name)
+    
