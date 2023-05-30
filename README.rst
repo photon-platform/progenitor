@@ -1,6 +1,6 @@
-Progenitor - give life to Python projects
-==========
 
+Progenitor - give life to Python projects
+=========================================
 Progenitor is a Python utility for creating new Python projects. It sets up a new project with everything ready for development, documentation, and publication.
 
 Features
