@@ -23,21 +23,7 @@ import pkg_resources
 @click.command()
 def run(org_name, namespace, project_name, author, path):
     """Create a new Python project in an empty folder."""
-<<<<<<< HEAD
-    #  org_name = "photon-platform"
-    #  namespace = "photon_platform"
     create_project(org_name, namespace, project_name, author, path )
-=======
-    blueprint_path = pkg_resources.resource_filename(
-        "photon_platform.progenitor", "blueprint.yaml"
-    )
-    blueprint = load_blueprint(blueprint_path)
-
-    org_name = "photon-platform"
-    namespace = "photon_platform"
-    create_project(project_name, author, path, org_name, namespace)
->>>>>>> e30ae3929923502be6065e5d99e3c868cd0761f5
-
 
 if __name__ == "__main__":
     run()
