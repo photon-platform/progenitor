@@ -1,7 +1,6 @@
 [project]
 name = "photon-platform-progenitor"
 dynamic = ["version"]
-# version = "0.0.1"
 authors = [
   { name="phi ARCHITECT", email="github@phiarchitect.com" },
 ]

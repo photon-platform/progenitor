@@ -3,7 +3,7 @@ from pathlib import Path
 from jinja2 import Environment, PackageLoader
 
 
-def create_project(project_name, author, path, org_name, namespace):
+def create_project(org_name, namespace, project_name, author, path):
     """Create a new Python project in an empty folder."""
     project_path = Path(path) / project_name
 
