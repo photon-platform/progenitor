@@ -9,3 +9,10 @@ form:
       validate:
         required: true
         max_length: 8
+    project-name:
+      label: Project Name
+      placeholder: Enter Name
+      type: Input
+      validate:
+        required: true
+        max_length: 8

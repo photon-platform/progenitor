@@ -17,6 +17,9 @@ def create_project(org_name, namespace, project_name, author, path):
 
     copy_template_files(project_path, project_name, author, org_name, namespace)
 
+    #  create_module(project_path, namespace, project_name)
+    modulator = Modulator(project_path, namespace)
+    modulator.create_module(project_name)
     #  click.echo(f"Python project '{project_name}' has been created at {project_path}")
 
 
@@ -45,7 +48,4 @@ def copy_template_files(project_path, project_name, author, org_name, namespace)
         template = env.get_template(file_info["template"])
         target.write_text(template.render(template_variables))
 
-    #  create_module(project_path, namespace, project_name)
-    modulator = Modulator(project_path, namespace)
-    modulator.create_module(project_name)
     
