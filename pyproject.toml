@@ -16,6 +16,7 @@ dependencies = [
     "click",
     "textual",
     "rich",
+    "trogon",
     "jinja2",
 ]
 
