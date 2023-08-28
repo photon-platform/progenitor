@@ -1,0 +1,11 @@
+{% set module_path = namespace + '.' + project_name %}
+{{ module_path }}
+{{ '=' * module_path|length }}
+
+.. automodule:: {{ module_path }}
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+

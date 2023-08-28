@@ -8,10 +8,31 @@
   template: .gitignore.j2
 - target: .ctags
   template: .ctags.j2
+
+- target: demos/demo.py
+  template: demos/demo.py.j2
+
 - target: docsrc/index.rst
-  template: index.rst.j2
+  template: docsrc/index.rst.j2
 - target: docsrc/conf.py
-  template: conf.py.j2
+  template: docsrc/conf.py.j2
+
+- target: docsrc/demos/index.rst
+  template: docsrc/demos/index.rst.j2
+- target: docsrc/demos/demo.rst
+  template: docsrc/demos/demo.rst.j2
+
+- target: docsrc/mission/index.rst
+  template: docsrc/mission/index.rst.j2
+- target: docsrc/refs/index.rst
+  template: docsrc/refs/index.rst.j2
+- target: docsrc/modules/index.rst
+  template: docsrc/modules/index.rst.j2
+- target: docsrc/usage/index.rst
+  template: docsrc/usage/index.rst.j2
+- target: docsrc/todos.rst
+  template: docsrc/todos.rst.j2
+
 - target: .github/workflows/action.yml
   template: action.yml.j2
 

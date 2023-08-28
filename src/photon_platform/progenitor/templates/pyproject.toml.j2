@@ -1,5 +1,5 @@
 [project]
-name = "{{org_name}}-{{project_name}}"
+name = "{{ org_name }}-{{ project_name }}"
 dynamic = ["version"]
 authors = [
   { name="phi ARCHITECT", email="github@phiarchitect.com" },
@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-{{project_name}} = "{{namespace}}.{{project_name}}.__main__:main"
+{{ project_name }} = "{{ namespace }}.{{ project_name }}.__main__:main"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
@@ -27,13 +27,13 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["{{namespace}}"]
+include = ["{{ namespace }}"]
 namespaces = true
 
 [tool.setuptools.dynamic]
-version = {attr = "{{namespace}}.{{project_name}}.__version__"}
+version = {attr = "{{ namespace }}.{{ project_name }}.__version__"}
 
 [project.urls]
-"Website" = "https://{{org_name}}.github.io/{{project_name}}"
-"Repository" = "https://github.com/{{org_name}}/{{project_name}}"
-"Issues" = "https://github.com/{{org_name}}/{{project_name}}/issues"
+"Website" = "https://{{ org_name }}.github.io/{{ project_name }}"
+"Repository" = "https://github.com/{{ org_name }}/{{ project_name }}"
+"Issues" = "https://github.com/{{ org_name }}/{{ project_name }}/issues"
