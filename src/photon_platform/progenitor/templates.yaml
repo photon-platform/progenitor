@@ -12,6 +12,11 @@
 - target: demos/demo.py
   template: demos/demo.py.j2
 
+- target: docsrc/_static/css/custom.css.j2
+  template: docsrc/_static/css/custom.css
+- target: docsrc/_static/css/rtd-dark.css.j2
+  template: docsrc/_static/css/rtd-dark.css
+
 - target: docsrc/conf.py
   template: docsrc/conf.py.j2
 
