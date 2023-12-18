@@ -1,3 +1,5 @@
+- target: CHANGELOG.rst
+  template: CHANGELOG.rst.j2
 - target: LICENSE
   template: LICENSE.j2
 - target: pyproject.toml
@@ -24,6 +26,12 @@
   template: docsrc/index.rst.j2
 - target: docsrc/intro.rst
   template: docsrc/intro.rst.j2
+- target: docsrc/glossary.rst
+  template: docsrc/glossary.rst.j2
+- target: docsrc/changelog.rst
+  template: docsrc/changelog.rst.j2
+- target: docsrc/todos.rst
+  template: docsrc/todos.rst.j2
 
 - target: docsrc/demos/index.rst
   template: docsrc/demos/index.rst.j2
@@ -38,8 +46,6 @@
   template: docsrc/modules/index.rst.j2
 - target: docsrc/usage/index.rst
   template: docsrc/usage/index.rst.j2
-- target: docsrc/todos.rst
-  template: docsrc/todos.rst.j2
 
 - target: .github/workflows/action.yml
   template: action.yml.j2
