@@ -1,13 +1,13 @@
 from ablog.conf import *
-import {{ github_acct }}.{{ repo }} as module
+import {{ package_namespace }}.{{ package_name }} as module
 version = module.__version__
 
 
-org = "{{ github_acct }}"
-org_name = "{{ github_acct_name }}"
+org = "{{ github_id }}"
+org_name = "{{ github_id }}"
 
-repo = "{{ repo }}"
-repo_name = "{{ repo_name }}"
+repo = "{{ github_repo_id }}"
+repo_name = "{{ github_repo_id }}"
 
 setup_globals(org, org_name, repo, repo_name)
 

@@ -5,33 +5,30 @@ from jinja2 import Environment, PackageLoader
 from photon_platform.modulator import Modulator
 
 
-def create_project(org_name, namespace, project_name, author, path):
+def create_project(github_id, package_namespace, github_repo_id, package_name, author, path):
     """Create a new Python project in an empty folder."""
-    project_path = Path(path) / project_name
+    project_path = Path(path) / package_name
 
     if not project_path.exists():
         project_path.mkdir(parents=True)
     else:
-        click.echo(f"Error: The path {project_path} already exists.")
+        print(f"Error: The path {project_path} already exists.")
         return
 
-    copy_template_files(project_path, project_name, author, org_name, namespace)
+    # create module stubs
+    modulator = Modulator(project_path, package_namespace)
+    modulator.create_module(package_name)
 
-    #  create_module(project_path, namespace, project_name)
-    modulator = Modulator(project_path, namespace)
-    modulator.create_module(project_name)
-    #  click.echo(f"Python project '{project_name}' has been created at {project_path}")
-
-
-def copy_template_files(project_path, project_name, author, org_name, namespace):
+    # generate templates
     env = Environment(
         loader=PackageLoader("photon_platform.progenitor"),
     )
     template_variables = {
-        "project_name": project_name,
         "author": author,
-        "org_name": org_name,
-        "namespace": namespace,
+        "github_id": github_id,
+        "github_repo_id": github_repo_id,
+        "package_namespace": package_namespace,
+        "package_name": package_name,
     }
 
     script_dir = Path(__file__).parent.absolute()

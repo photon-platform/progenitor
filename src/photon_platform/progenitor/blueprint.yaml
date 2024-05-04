@@ -2,17 +2,34 @@ form:
   title: Progenitor
   id: progenitor
   fields:
-    project-name:
-      label: Project Name
-      placeholder: Enter Name
+    github_id:
+      label: Github ID
+      placeholder: Enter Github Org or Personal ID
       type: Input
       validate:
         required: true
-        max_length: 8
-    project-name:
-      label: Project Name
-      placeholder: Enter Name
+    package_namespace:
+      label: Package Namespace
+      placeholder: Enter Namespace for Python modules (same as github id - no hyphens)
       type: Input
       validate:
         required: true
-        max_length: 8
+    github_repo_id:
+      label: Repo ID
+      placeholder: name of the github repo
+      type: Input
+      validate:
+        required: true
+    package_name:
+      label: Package Name
+      placeholder: Enter Name for Python package (same as repo - no hyphens)
+      type: Input
+      validate:
+        required: true
+    author:
+      label: Author
+      placeholder: ID of author (same as github id)
+      type: Input
+      validate:
+        required: true
+

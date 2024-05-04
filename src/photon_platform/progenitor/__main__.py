@@ -1,36 +1,25 @@
 """The package entry point into the application."""
 
-#  from .app import run
-
-#  if __name__ == "__main__":
-    #  run()
-
-import click
-from trogon import tui
-from .progenitor import create_project
+from pathlib import Path
+from photon_platform.progenitor import create_project
 from photon_platform.formulator import load_blueprint, Formulator
 
-import pkg_resources
+#  import pkg_resources
 
 
-@tui()
-@click.option(
-    "--org_name", prompt="Name of the github acct/org", help="Name of the github acct/org"
-)
-@click.option(
-    "--namespace", prompt="Name of the namespace", help="Name of the namespace"
-)
-@click.option(
-    "--project_name", prompt="Name of the project", help="Name of the project"
-)
-@click.option("--author", prompt="Author of the project", help="Author of the project")
-@click.option(
-    "--path", prompt="Path to the project folder", help="Path to the project folder"
-)
-@click.command()
-def run(org_name, namespace, project_name, author, path):
+def run():
     """Create a new Python project in an empty folder."""
-    create_project(org_name, namespace, project_name, author, path )
+    script_dir = Path(__file__).parent.absolute()
+    blueprint_file = script_dir / "blueprint.yaml"
+    blueprint = load_blueprint(blueprint_file)
+    #  print(blueprint)
+
+    form = Formulator(blueprint)
+    reply = form.run()
+    print(reply)
+
+    #  create_project(org_name, namespace, project_name, author, path )
+    create_project(**reply, path='.')
 
 if __name__ == "__main__":
     run()

@@ -1,5 +1,5 @@
-{{ github_repo_id }}
-{{ '=' * github_repo_id|length }}
+repo_test
+=========
 
 .. include:: intro.rst
 
@@ -20,9 +20,9 @@ contents:
    mission/index.rst
    usage/index.rst
    modules/index.rst
-   logs.rst
    demos/index.rst
    refs/index.rst
+   log </log#https://>
    todos.rst
 
 
