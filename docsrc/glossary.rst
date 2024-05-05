@@ -7,4 +7,3 @@ glossary
    example
        an example of how to structure a glossary item
 
-

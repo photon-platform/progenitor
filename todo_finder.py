@@ -1,4 +1,4 @@
-from textual.app import App
+from textual.app import App, ComposeResult
 from textual.widgets import Tree
 from textual.scroll_view import ScrollView
 import os
@@ -19,17 +19,25 @@ class TodoScanner:
 
 
 class TodoApp(App):
-    async def on_load(self, event):
-        await self.bind("q", "quit", "Quit")
-
-    async def on_mount(self):
+    def compose(self) -> ComposeResult:
         self.scanner = TodoScanner()
         self.scanner.scan_files()
 
         # Create and add the TreeControl to the layout
-        self.tree = TreeControl("Files with TODOs")
-        # Add files to the tree here
-        await self.view.dock(self.tree)
+        tree = Tree("Files with TODOs")
+        tree.root.expand()
+        characters = tree.root.add("Characters", expand=True)
+        characters.add_leaf("Paul")
+        characters.add_leaf("Jessica")
+        characters.add_leaf("Chani")
+        yield tree
+
+    #  async def on_load(self, event):
+        #  await self.bind("q", "quit", "Quit")
+
+    #  async def on_mount(self):
+        #  # Add files to the tree here
+        #  await self.view.dock(self.tree)
 
     # Add other event handling methods here
 
