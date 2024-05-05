@@ -5,7 +5,7 @@ from jinja2 import Environment, PackageLoader
 from photon_platform.modulator import Modulator
 
 
-def create_project(github_id, package_namespace, github_repo_id, package_name, author, path):
+def create_project(github_id, package_namespace, github_repo_id, package_name, author, description, path):
     """Create a new Python project in an empty folder."""
     project_path = Path(path) / package_name
 
@@ -29,6 +29,7 @@ def create_project(github_id, package_namespace, github_repo_id, package_name, a
         "github_repo_id": github_repo_id,
         "package_namespace": package_namespace,
         "package_name": package_name,
+        "description": description,
     }
 
     script_dir = Path(__file__).parent.absolute()

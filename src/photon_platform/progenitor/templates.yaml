@@ -32,6 +32,12 @@
   template: docsrc/changelog.rst.j2
 - target: docsrc/todos.rst
   template: docsrc/todos.rst.j2
+- target: docsrc/logs.rst
+  template: docsrc/logs.rst.j2
+- target: docsrc/connect.rst
+  template: docsrc/connect.rst.j2
+- target: docsrc/about.rst
+  template: docsrc/about.rst.j2
 
 - target: docsrc/demos/index.rst
   template: docsrc/demos/index.rst.j2

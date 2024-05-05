@@ -26,6 +26,13 @@ form:
       type: Input
       validate:
         required: true
+    description:
+      label: Description
+      placeholder: Short statement on the project
+      type: Input
+      validate:
+        required: true
+
     author:
       label: Author
       placeholder: ID of author (same as github id)
