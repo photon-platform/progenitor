@@ -11,7 +11,7 @@ def run_command(command):
     return stdout.decode().strip(), stderr.decode().strip()
 
 
-def init_github_repo():
+def main():
     # Get the parent folder name as repository name and GitHub username
     repo_path = Path.cwd()
     repo_name = repo_path.name
@@ -43,4 +43,4 @@ def init_github_repo():
 
 
 if __name__ == "__main__":
-    init_github_repo()
+    main()

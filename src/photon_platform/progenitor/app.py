@@ -8,7 +8,9 @@ import pkg_resources
 
 @tui()
 @click.option(
-    "--org_name", prompt="Name of the github acct/org", help="Name of the github acct/org"
+    "--org_name",
+    prompt="Name of the github acct/org",
+    help="Name of the github acct/org",
 )
 @click.option(
     "--namespace", prompt="Name of the namespace", help="Name of the namespace"
@@ -23,7 +25,8 @@ import pkg_resources
 @click.command()
 def run(org_name, namespace, project_name, author, path):
     """Create a new Python project in an empty folder."""
-    create_project(org_name, namespace, project_name, author, path )
+    create_project(org_name, namespace, project_name, author, path)
+
 
 if __name__ == "__main__":
     run()

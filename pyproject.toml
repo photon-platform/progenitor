@@ -23,6 +23,7 @@ dependencies = [
 
 [project.scripts]
 progenitor = "photon_platform.progenitor.__main__:run"
+prog_init = "photon_platform.progenitor.git_init:main"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]

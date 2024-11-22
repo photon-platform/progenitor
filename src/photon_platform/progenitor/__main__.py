@@ -19,7 +19,8 @@ def run():
     print(reply)
 
     #  create_project(org_name, namespace, project_name, author, path )
-    create_project(**reply, path='.')
+    create_project(**reply, path=".")
+
 
 if __name__ == "__main__":
     run()

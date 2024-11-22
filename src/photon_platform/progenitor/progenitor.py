@@ -5,7 +5,15 @@ from jinja2 import Environment, PackageLoader
 from photon_platform.modulator import Modulator
 
 
-def create_project(github_id, package_namespace, github_repo_id, package_name, author, description, path):
+def create_project(
+    github_id,
+    package_namespace,
+    github_repo_id,
+    package_name,
+    author,
+    description,
+    path,
+):
     """Create a new Python project in an empty folder."""
     project_path = Path(path) / package_name
 
@@ -45,5 +53,3 @@ def create_project(github_id, package_namespace, github_repo_id, package_name, a
         )  # create directory if it doesn't exist
         template = env.get_template(file_info["template"])
         target.write_text(template.render(template_variables))
-
-    

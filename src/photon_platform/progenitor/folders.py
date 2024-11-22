@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+
 def get_base_project_folder() -> Path:
     """
     Retrieve the base project folder from an environment variable or default to '~/PROJECTS'.
@@ -37,4 +38,3 @@ if __name__ == "__main__":
 
     print(f"{base_folder=}")
     print(f"{org_folders=}")
-

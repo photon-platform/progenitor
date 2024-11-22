@@ -1,0 +1,90 @@
+/home/phiarchitect/PROJECTS/photon-platform/progenitor
+├── CHANGELOG.rst
+├── demos
+│   └── demo.py
+├── docsrc
+│   ├── about.rst
+│   ├── changelog.rst
+│   ├── conf.py
+│   ├── connect.rst
+│   ├── demos
+│   │   ├── demo.rst
+│   │   └── index.rst
+│   ├── glossary.rst
+│   ├── index.rst
+│   ├── intro.rst
+│   ├── log
+│   │   ├── 24.125-164141
+│   │   │   └── index.rst
+│   │   ├── 24.126-084330
+│   │   │   └── index.rst
+│   │   └── 24.126-084512
+│   │       └── index.rst
+│   ├── logs.rst
+│   ├── mission
+│   │   └── index.rst
+│   ├── modules
+│   │   └── index.rst
+│   ├── __pycache__
+│   ├── refs
+│   │   └── index.rst
+│   ├── _static
+│   │   ├── css
+│   │   │   └── custom.css
+│   │   └── logo.png
+│   ├── todos.rst
+│   └── usage
+│       └── index.rst
+├── git_init.py
+├── LICENSE
+├── pyproject.toml
+├── README.rst
+├── src
+│   └── photon_platform
+│       └── progenitor
+│           ├── app.py
+│           ├── blueprint.yaml
+│           ├── folders.py
+│           ├── __init__.py
+│           ├── __main__.py
+│           ├── progenitor.py
+│           ├── __pycache__
+│           ├── templates
+│           │   ├── action.yml.j2
+│           │   ├── CHANGELOG.rst.j2
+│           │   ├── demos
+│           │   │   └── demo.py.j2
+│           │   ├── docsrc
+│           │   │   ├── about.rst.j2
+│           │   │   ├── changelog.rst.j2
+│           │   │   ├── conf.py.j2
+│           │   │   ├── connect.rst.j2
+│           │   │   ├── demos
+│           │   │   │   ├── demo.rst.j2
+│           │   │   │   └── index.rst.j2
+│           │   │   ├── glossary.rst.j2
+│           │   │   ├── index.rst.j2
+│           │   │   ├── intro.rst.j2
+│           │   │   ├── logs.rst.j2
+│           │   │   ├── mission
+│           │   │   │   └── index.rst.j2
+│           │   │   ├── modules
+│           │   │   │   └── index.rst.j2
+│           │   │   ├── refs
+│           │   │   │   └── index.rst.j2
+│           │   │   ├── _static
+│           │   │   │   ├── css
+│           │   │   │   │   ├── custom.css.j2
+│           │   │   │   │   └── rtd-dark.css.j2
+│           │   │   │   ├── logo.png
+│           │   │   │   └── splash.png
+│           │   │   ├── todos.rst.j2
+│           │   │   └── usage
+│           │   │       └── index.rst.j2
+│           │   ├── LICENSE.j2
+│           │   ├── pyproject.toml.j2
+│           │   └── README.rst.j2
+│           └── templates.yaml
+└── todo_finder.py
+
+28 directories, 59 files
