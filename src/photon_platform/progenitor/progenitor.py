@@ -1,7 +1,7 @@
 import yaml
 from pathlib import Path
 from jinja2 import Environment, PackageLoader
-
+from datetime import date
 from photon_platform.modulator import Modulator
 
 
@@ -38,6 +38,7 @@ def create_project(
         "package_namespace": package_namespace,
         "package_name": package_name,
         "description": description,
+        "init": date.today().strftime("%Y.%j")
     }
 
     script_dir = Path(__file__).parent.absolute()
